@@ -1,0 +1,330 @@
+// zin min myat start
+$input-color: transparent !important;
+$input-bottom-border: darken(#e3e5f1, 15);
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.form-btn {
+  background-image: linear-gradient(to bottom, #18212a, #495563);
+  color: white;
+  // border-color: #E7E5E5;
+  border: none;
+  border-radius: 6px;
+  min-width: 6rem;
+  height: 2.5rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  transition: all 0.1s linear;
+}
+
+.form-btn:focus:hover,
+.form-btn:active:hover,
+.form-btn:hover {
+  color: #000000;
+  background-image: linear-gradient(to bottom, #a1a8f7, #ffffff);
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.1s linear;
+}
+.form-btn:focus,
+.form-btn:active {
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  transition: all 0.1s linear;
+}
+
+.btn-hover:hover {
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  transition: all 0.1s linear;
+}
+
+input[type="file"],
+.custom-file-label,
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+  background-color: white;
+}
+
+input[type="file"]:focus,
+.custom-file-label:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  background-color: white !important;
+  box-shadow: none !important;
+  // border: #D8DBE0 !important;
+}
+.modal-footer {
+  border-top: unset !important;
+}
+
+.ok-btn {
+  background-image: linear-gradient(to bottom, #30b32c, #30b32c);
+  color: white;
+  // border-color: #E7E5E5;
+  border: none;
+  border-radius: 6px;
+  min-width: 5rem;
+  height: 2.2rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  transition: all 0.1s linear;
+}
+.ok-btn:hover {
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  transition: all 0.1s linear;
+  color: white !important;
+}
+.cancel-btn {
+  background-image: linear-gradient(to bottom, #f62b14, #f62b14);
+  color: white;
+  // border-color: #E7E5E5;
+  border: none;
+  border-radius: 6px;
+  min-width: 5rem;
+  height: 2.2rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  transition: all 0.1s linear;
+}
+.cancel-btn:hover {
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  transition: all 0.1s linear;
+  color: white !important;
+}
+.success {
+  color: white;
+  background-color: #6edabc;
+  border: 1px solid #6edabc !important;
+  border-radius: 10px;
+}
+.error {
+  color: white;
+  background-color: #f36d64;
+  border: 1px solid #f36d64 !important;
+  border-radius: 10px;
+}
+
+#overlay {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #adb5bd;
+  opacity: 0.5;
+}
+#overlay div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.shapeshifter {
+  animation-duration: 800ms; // 800 ms
+  animation-timing-function: steps(60);
+  width: 140px !important;
+  height: 140px !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shapeshifter.play {
+  animation-name: play60;
+  animation-iteration-count: infinite;
+}
+.order-system-card-body{
+    margin-left: unset !important;
+    margin-right: unset !important;
+    background: #ebedef;
+    margin-top: 119px;
+}
+
+.menu_category_card{
+  height: 100px;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px -2px;
+}
+.css-16t5uud{
+  min-width: 100% !important;
+  background: #455261 !important;
+
+}
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+  color: white;
+}
+.css-ptiqhd-MuiSvgIcon-root{
+  color: white;
+}
+.menu-list-menu-name{
+  font-size: 15px;
+  font-family: cursive;
+  padding: 10px;
+  padding-left: 20px;
+}
+.nav-main-bar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-main-body-menu-type {
+  padding: 16px;
+  margin-top: 160px;
+}
+.add-to-cart-btn{
+  background: #455261;
+}
+.nav-main-body-order-system{
+  padding: 16px;
+  margin-top: 119px;
+  background: white;
+}
+// label{
+//   font-family: cursive;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// zin min myat end
+
+
+
+
+
+
+
+
+
+
+
+// Zeyar Min Start
+.input-row {
+  margin-bottom: 1rem;
+}
+.btn {
+  width: 10rem;
+  color: #ffffff;
+}
+.btn-save {
+  background-color: #6edabc;
+  color: #ffffff;
+  margin-right: 2rem;
+}
+.btn-search {
+  background-color: #3a86ff;
+  margin-left: 2rem;
+}
+// Zeyar Min End
+// ***** START PHYOE WAI AUNG *****//
+.login{
+padding: 0 30px;
+border-radius: 15px;
+background-image: linear-gradient(to right, #161e29, #3c4654);
+border: 1px solid #39372e;
+box-shadow: 0px 0px 8px rgba(166, 167, 155, 0.6);
+}
+.login-bg{
+  background-image: url(/image/side_bar_profile.jpg);
+  background-size: cover;
+}
+.login-title{
+  color: #feec72;
+  font-weight: bold;
+}
+.form-label{
+  color: #feec72;
+}
+.login-btn{
+  width: auto !important;
+  margin-right: 1rem;
+}
+hr{
+  margin: 0;
+  width: 100%;
+  border: 1px #feec72;
+  border-top-style: dashed;
+}
+.forgot-password{
+  color: #feec72;
+}
+.forgot-password:hover{
+  font-weight: bold;
+}
+.cursor-style{
+  cursor: pointer;
+}
+.red{
+  color: rgb(245, 0, 0);
+  animation: fadeIn ease 3s;
+}
+.tablet-register-form{
+  padding: 0 100px;
+}
+.required:after {
+  content: " *";
+  color: red;
+}
+// table start
+.table-container {
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(171, 190, 209, 0.6);
+	padding: 30px 0px 30px 0px;
+	margin-top: 40px;
+	margin: 40px;
+	border-radius: 8px;
+}
+.total-rows {
+	color: #3B409B;
+	font-weight: bold;
+}
+.shop-menu-table thead tr th{
+  vertical-align: middle;
+}
+.delete:hover{
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-out;
+}
+@media (max-width:500px) {
+  .tablet-register-form{
+    padding: 0 20px;
+  }
+}
+// ***** END PHYOE WAI AUNG *****//
+
+// ***** START Yuwa Ko Ko *****//
+.without-allowed{
+  cursor: not-allowed;
+  background:#ebeee6 !important;
+}
+
+// ***** END Yuwa Ko Ko *****//

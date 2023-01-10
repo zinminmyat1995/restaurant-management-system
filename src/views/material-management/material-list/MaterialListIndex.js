@@ -21,10 +21,17 @@ const MaterialListIndex = () => {
     {purchase_type:"4",name: "Pate Thar"},
   ]);
   const [selectPurchaseValue,setSelectPurchaseValue] = useState("");//for purchase value
+  const [tableData, setTableData] = useState([
+    {material_id:"1",material_name:"Cat",purchase_type:"Gram"},
+    {material_id:"2",material_name:"Noodle",purchase_type:"Buu"},
+    {material_id:"3",material_name:"Chicken",purchase_type:"Gram"},
+    {material_id:"4",material_name:"Pork",purchase_type:"Pate Thar"},
+
+  ]); //for table show
 
    /**
    * get material name from input field
-   * @author yaminzaw
+   * @author yuwa
    * @create 22/09/2022
    * @param e
    */
@@ -34,12 +41,27 @@ const MaterialListIndex = () => {
 
    /**
    * onChange function of select box(select purchase type)
-   * @author yaminzaw
+   * @author yuwa
    * @create 22/09/2022
    * @param e
    */
   const selectPurChaseOnChange = (e) => {
     setSelectPurchaseValue(e.target.value)
+  };
+
+  
+
+  const searchClick = () => {
+    alert("search");
+  };
+  
+
+  const deleteClick = (id) => {
+    alert(id);
+  };
+
+  const editClick = (id) => {
+    alert(id);
   };
   
 
@@ -51,6 +73,10 @@ const MaterialListIndex = () => {
         selectPurchaseType={selectPurchaseType}
         selectPurchaseValue={selectPurchaseValue}
         selectPurChaseOnChange={selectPurChaseOnChange}
+        tableData={tableData}
+        searchClick={searchClick}
+        deleteClick={deleteClick}
+        editClick={editClick}
       />
     </>
   )

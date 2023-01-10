@@ -6,6 +6,30 @@ export default [
     className: "dashboard"
   },
   {
+    _tag: 'CSidebarNavItem',
+    name: 'Cashier',
+    to: '/cashier',
+    className: "cashier"
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Employee Management',
+    route: '/employee-management',
+    className: "employee-management",
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Employee Registration',
+        to: '/employee-management/employee-register',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Employee List',
+        to: '/employee-management/employee-list',
+      }
+    ],
+  },
+  {
     _tag: 'CSidebarNavDropdown',
     name: 'Shop Management',
     route: '/shop-management',
@@ -68,6 +92,12 @@ export default [
         to: '/menu-management/menu-list',
       },
     ],
-  }
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Logout',
+    to: '/logout',
+    className: "logout"
+  },
 ]
 

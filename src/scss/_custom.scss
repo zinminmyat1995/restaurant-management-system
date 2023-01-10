@@ -21,6 +21,18 @@
     background-image: url(/image/menu-management.svg);
     margin-right: 0.5rem;
 }
+.c-sidebar-nav > .employee-management a::before {
+  background-image: url(/image/employee-management.svg);
+  margin-right: 0.5rem;
+}
+.c-sidebar-nav > .logout a::before {
+  background-image: url(/image/logout.svg);
+  margin-right: 0.5rem;
+}
+.c-sidebar-nav > .cashier a::before {
+  background-image: url(/image/cashier.svg);
+  margin-right: 0.5rem;
+}
 
   
   body {

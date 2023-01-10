@@ -13,7 +13,7 @@ const TheLayout = React.lazy(() => import("./containers/TheLayout"));
 
 // Pages
 const LoginIndex = React.lazy(() => import("./views/login/LoginIndex"));
-// const ShopRegistrationAndList = React.lazy(() => import("./views/shop-management/shop-registration-and-list/ShopRegistrationAndListIndex"));
+const Logout = React.lazy(() => import("./views/logout/LogoutIndex"));
 
 const OrderSystem = React.lazy(() => import("./views/order-management/order-system/OrderSystemIndex"));
 
@@ -32,6 +32,12 @@ class App extends Component {
               name="Login Page"
               render={(props) => <LoginIndex {...props} />}
             />
+             <Route
+              exact
+              path="/logout"
+              name="Logout"
+              render={(props) => <Logout {...props} />}
+            />
             <Route
               exact
               path="/404"
@@ -43,6 +49,24 @@ class App extends Component {
               path="/500"
               name="Page 500"
               render={(props) => <Page500 {...props} />}
+            />
+             <Route
+              exact
+              path="/cashier"
+              name="Cashier"
+              render={(props) => <TheLayout {...props} />}
+            />
+            <Route
+              exact
+              path="/employee-management/employee-register"
+              name="Employee Registration"
+              render={(props) => <TheLayout {...props} />}
+            />
+            <Route
+              exact
+              path="/employee-management/employee-list"
+              name="Employee List"
+              render={(props) => <TheLayout {...props} />}
             />
             <Route
               exact

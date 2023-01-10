@@ -13,6 +13,7 @@ import {
   CLink,
   CRow,
   CCol,
+  CLabel,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import moment from "moment";
@@ -30,6 +31,7 @@ const TheHeader = () => {
   const dispatch = useDispatch();
   const [realTime, setRealTime] = useState("");
   const [date, setDate] = useState("");
+  const [ user, setUser ] = useState("Ko Min Min");
   const sidebarShow = useSelector((state) => state.sidebarShow);
   let history = useHistory();
   useEffect(() => {
@@ -59,11 +61,7 @@ const TheHeader = () => {
   }, 1000);
 
 
-  // for logout button function
-  let logoutBtn = ()=>{
-    localStorage.clear();
-    history.push("/login");
-  }
+
 
 
   return (
@@ -111,10 +109,7 @@ const TheHeader = () => {
             className="c-subheader-nav-link"
             style={{ position: "absolute", right: 0, marginRight: "0px" }}
           >
-            <CCol style={{ marginRight: "-13px" }}>
-              <CImg src={"/image/calendar.svg"} width="33px" />
-            </CCol>
-            <CCol
+            {/* <CCol
               style={{
                 minWidth: "15rem",
                 color: "white",
@@ -126,10 +121,24 @@ const TheHeader = () => {
               }}
             >
               {date}&nbsp; &nbsp; {realTime}
+            </CCol> */}
+            <CCol style={{ marginRight: "-13px" }}>
+              <CImg src={"/image/user.svg"} width="33px" />
             </CCol>
-            <CCol>
-              <CImg src={"/image/logout.svg"} style={{cursor: "pointer"}} width="33px" onClick={logoutBtn} />
+            <CCol
+             style={{
+              minWidth: "10rem",
+              marginTop: "10px",
+              color: "black",
+              fontWeight: "bold"
+             }}
+            >
+              <CLabel>
+                {user}
+              </CLabel>
             </CCol>
+            
+  
           </CRow>
 
           {/* <CLink className="c-subheader-nav-link" href="#">

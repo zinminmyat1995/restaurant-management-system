@@ -93,9 +93,6 @@ const MaterialListForm = (props) => {
                 <>
                   <CRow className="mt-5">
                     <CCol lg="10">
-                      <h4 style={{ marginLeft: "18px" }}>
-                        Material List Table
-                      </h4>
                     </CCol>
 
                     <CCol lg="2">

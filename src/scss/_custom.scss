@@ -21,24 +21,12 @@
     background-image: url(/image/menu-management.svg);
     margin-right: 0.5rem;
 }
-.c-sidebar-nav > .employee-management a::before {
-  background-image: url(/image/employee-management.svg);
-  margin-right: 0.5rem;
-}
-.c-sidebar-nav > .logout a::before {
-  background-image: url(/image/logout.svg);
-  margin-right: 0.5rem;
-}
-.c-sidebar-nav > .cashier a::before {
-  background-image: url(/image/cashier.svg);
-  margin-right: 0.5rem;
-}
 
   
   body {
     font-family: "Titillium Web", sans-serif;
     // background: #f5f6fa;
-    // background: transparent !important;
+    background: transparent !important;
     margin: 0 auto;
   }
   
@@ -63,8 +51,8 @@
   }
   header.c-header.c-header-light.c-header-fixed.c-header-with-subheader {
     background-color: #fff;
-    // margin-left: 1rem;
-    // margin-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     box-shadow: 0px 0px 2px;
   }
   // Sidebar start
@@ -253,4 +241,29 @@
     padding: 8px;
   }
 /****** Start  Yamin Zaw  ********/
+
+/****** Start  Yuwa  ********/
+.user-before{
+  position: relative;
+  display: inline-block;
+}
+.user-before .user-after{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.user-before:hover .user-after{
+  display: inline;
+}
+
+.table td{
+  vertical-align: middle;
+}
+
+.hideRow {
+  display: none;
+}
+/****** End Yuwa  ********/
   

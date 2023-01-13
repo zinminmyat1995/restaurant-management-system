@@ -5,7 +5,7 @@ export default {
   JSE004: "Please choose you want to Delete!",
   JSE005: "Please fill %s!",
   JSE007: "%s is already exists!",
-  JSE009: "The maximum upload file is not more than 15 files!", 
+  JSE009: "The maximum upload file is not more than 15 files!",
   JSE010: "Please fill Leave Name English Character Only!",
   JSE011: "%s is greater than 100!",
   JSE012: "Please fill %s is between 0 to 1!",
@@ -39,6 +39,7 @@ export default {
   JSE040: "Your Password is Weak!",
   JSE041: "One Attach File Can Accept Only %s Files!",
   JSE042: "Only %s can be create!",
-  JSE043: "You need to %s not to use this information to another sections!"
-, JSE044: "Password must be contained capital letter, small letter, special characters and numbers!"
+  JSE043: "You need to %s not to use this information to another sections!",
+  JSE044: "Password must be contained capital letter, small letter, special characters and numbers!",
+  JSE045: "Password must be contain at least 6 characters, Capital Letters,Small Letters,Special Characters and Numbers!",
 };

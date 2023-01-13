@@ -8,7 +8,7 @@ import SuccessError from '../../common/SuccessError';
 const ShopAndMenuTabletRegisterIndex = () => {
   const [error, setError] = useState([]); // for error message
   const [success, setSuccess] = useState([]); // for success message
-  const [shopName, setShopName] = useState(""); // for selected shop name 
+  const [shopName, setShopName] = useState(""); // for selected shop name
   const [count, setCount] = useState(""); // for table count
   const [code, setCode] = useState(""); // for shop code or tablet code
   const [listData, setListData] = useState([]); // for shop and tablet list table
@@ -36,7 +36,7 @@ const ShopAndMenuTabletRegisterIndex = () => {
     }
   }
 
-  //onChange table count 
+  //onChange table count
   const countChange = (e) => {
     setOwnPassword("");
     if(validateIntegerOnly(e.target.value)){
@@ -46,7 +46,7 @@ const ShopAndMenuTabletRegisterIndex = () => {
     }
   }
 
-  // addClick function 
+  // addClick function
   const addClick = () => {
     setPassword("");
     if(!checkNullOrBlank(shopName)){
@@ -113,10 +113,10 @@ const ShopAndMenuTabletRegisterIndex = () => {
       <CCol xs="12">
         <CCard>
           <CCardHeader>
-            <h4>Shop & Menu Tablet Registration</h4>
+            <h4 className='m-0'>Shop & Menu Tablet Registration</h4>
           </CCardHeader>
           <CCardBody>
-            <ShopAndMenuTabletRegisterForm 
+            <ShopAndMenuTabletRegisterForm
             selectChange = {selectChange}
             countChange = {countChange}
             shopName = {shopName}

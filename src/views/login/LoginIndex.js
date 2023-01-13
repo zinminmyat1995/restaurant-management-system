@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import { checkNullOrBlank } from "../common/CommonValidation";
+import { checkNullOrBlank,checkPassword } from "../common/CommonValidation";
 import CommonMessage from "../common/CommonMessage";
 
 /**
@@ -19,8 +19,11 @@ const LoginIndex = () => {
     const [password, setPassword] = useState(""); // for password
     const [userId, setUserId] = useState(""); // for user id
     const [email, setEmail] = useState(""); // for user email
-    const [status, setStatus] = useState(true); // for forgot password click status
+    const [confirmPass, setConfirmPass] = useState(""); //for user confirm password
+    const [token, setToken] = useState(""); // for token
+    const [status, setStatus] = useState(false); // for forgot password click status
     const [forgotStatus, setForgotStatus] = useState(false); // for forgot password click status
+    const [changePassword, setChangeStatus] = useState(true); // for change new password form status
     let err = [];
 
     const shopCodeChange = (e) => {
@@ -37,6 +40,14 @@ const LoginIndex = () => {
 
     const emailChange = (e) => {
       setEmail(e.target.value);
+    }
+
+    const confirmPassChange = (e) => {
+      setConfirmPass(e.target.value);
+    }
+
+    const tokenChange = (e) => {
+      setToken(e.target.value);
     }
 
 
@@ -79,6 +90,40 @@ const LoginIndex = () => {
         }
     }
 
+    // submit Click function from change password form
+    const passwordSubmit = () => {
+        if(!checkNullOrBlank(password)){
+          err.push(CommonMessage.JSE005.replace("%s","Password"));
+        }else{
+          if(!checkPassword(password)){
+            err.push(CommonMessage.JSE045);
+          }
+        }
+        if(!checkNullOrBlank(confirmPass)){
+          err.push(CommonMessage.JSE005.replace('%s','Confirm Password'));
+        }
+        if(checkNullOrBlank(password) && checkNullOrBlank(confirmPass) && checkPassword(password)){
+          if(password != confirmPass){
+            err.push("Password did not match!");
+          }
+        }
+        if(!checkNullOrBlank(token)){
+          err.push(CommonMessage.JSE005.replace('%s','Token'));
+        }
+        if(!checkNullOrBlank(email)){
+          err.push(CommonMessage.JSE005.replace('%s','Email'));
+        }
+        if(err.length > 0) {
+          setError(err);
+          setSuccess([]);
+        }else{
+          setError([]);
+        }
+        if(err.length == 0){
+            setSuccess(["Change password successfully"]);
+        }
+    }
+
     // forgot password click function
     const passwordClick = () => {
         setError([]);setSuccess([]);setUserId("");setEmail("");
@@ -101,16 +146,22 @@ const LoginIndex = () => {
         password = {password}
         userId = {userId}
         email = {email}
+        confirmPass = {confirmPass}
+        token = {token}
         shopCodeChange = {shopCodeChange}
         passwordChange = {passwordChange}
         userIdChange = {userIdChange}
         emailChange = {emailChange}
+        confirmPassChange = {confirmPassChange}
+        tokenChange = {tokenChange}
         loginClick = {loginClick}
         passwordClick = {passwordClick}
         submitClick = {submitClick}
         backClick = {backClick}
         status = {status}
         forgotStatus = {forgotStatus}
+        changePassword = {changePassword}
+        passwordSubmit = {passwordSubmit}
         />
         </>
     )

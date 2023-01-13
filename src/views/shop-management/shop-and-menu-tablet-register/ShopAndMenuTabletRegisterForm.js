@@ -9,9 +9,9 @@ const ShopAndMenuTabletRegisterForm = (props) => {
         <div className="tablet-register-form">
             <CRow className="mb-5">
                 <CCol lg="6">
-                    <CRow>
+                    <CRow className="align-items-center">
                         <CCol lg="4">
-                            <CLabel className="required">Shop Name</CLabel>
+                            <CLabel className="required" style={{display:'contents'}}>Shop Name</CLabel>
                         </CCol>
                         <CCol lg="7">
                             <CSelect className="cursor-style" value={shopName} onChange={selectChange}>
@@ -24,10 +24,10 @@ const ShopAndMenuTabletRegisterForm = (props) => {
                     </CRow>
                 </CCol>
                 <CCol lg="6">
-                     <CRow>
+                     <CRow className="align-items-center">
                         <CCol></CCol>
                         <CCol lg="4">
-                            <CLabel className="required">Table Count</CLabel>
+                            <CLabel className="required" style={{display:'contents'}}>Table Count</CLabel>
                         </CCol>
                         <CCol lg="7">
                             <CInput type="text" value={count} onChange={countChange} onKeyDown={keyHandler}></CInput>

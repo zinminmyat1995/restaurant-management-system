@@ -357,6 +357,21 @@ hr{
   transform: translateY(-5px);
   transition: all 0.2s ease-out;
 }
+
+//employee list
+
+table thead{
+  // background-color: #9ca13c;
+  // color: white;
+}
+
+.table-responsive{
+  overflow: auto;
+}
+.emp-list-table{
+  min-width: 1580px;
+  width: 100%;
+}
 @media (max-width:500px) {
   .tablet-register-form{
     padding: 0 20px;

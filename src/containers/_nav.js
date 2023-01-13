@@ -63,6 +63,12 @@ export default [
         name: 'Material Registration',
         to: '/material-management/material-register',
       },
+      
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Material List',
+        to: '/material-management/material-list',
+      },
       {
         _tag: 'CSidebarNavItem',
         name: 'Import Material Registration',
@@ -70,8 +76,8 @@ export default [
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Material List',
-        to: '/material-management/material-list',
+        name: 'Import Material List',
+        to: '/material-management/import-material-list',
       }
     ],
   },

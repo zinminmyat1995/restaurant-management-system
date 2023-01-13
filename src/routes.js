@@ -9,6 +9,7 @@ const MenuRegisterIndex = React.lazy(() => import('./views/menu-management/menu-
 const MenuListIndex = React.lazy(() => import('./views/menu-management/menu-list/MenuListIndex'));
 const MaterialRegisterIndex = React.lazy(() => import('./views/material-management/material-register/MaterialRegisterIndex'));
 const ImportMaterialRegisterIndex = React.lazy(() => import('./views/material-management/import-material-register/ImportMaterialRegisterIndex'));
+const ImportMaterialList = React.lazy(() => import('./views/material-management/import-material-list/ImportMaterialListIndex'));
 const MaterialListIndex = React.lazy(() => import('./views/material-management/material-list/MaterialListIndex'));
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'));
@@ -32,6 +33,7 @@ const routes = [
   { path: '/material-management', name: 'Material Management',exact: true },
   { path: '/material-management/material-register', name: 'Material Register', component: MaterialRegisterIndex  },
   { path: '/material-management/import-material-register', name: 'Import Material Register', component: ImportMaterialRegisterIndex },
+  { path: '/material-management/import-material-list', name: 'Import Material List', component: ImportMaterialList },
   { path: '/material-management/material-list', name: 'Material List', component: MaterialListIndex },
 ];
 

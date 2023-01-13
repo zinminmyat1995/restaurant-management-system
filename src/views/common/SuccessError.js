@@ -1,6 +1,6 @@
 import React from "react";
 import { Markup } from "interweave";
-import { CCard } from "@coreui/react";
+import { CCard, CImg } from "@coreui/react";
 
 /**
  * To show error and success message
@@ -23,6 +23,7 @@ const SuccessError = (props) => {
             {Array.from(new Set(props.error)).map((data, index) => {
               return (
                 <div key={index}>
+                  <CImg src='/image/error.svg' width={15} className="mr-1"/>
                   <Markup content={data} />
                 </div>
               );
@@ -37,6 +38,7 @@ const SuccessError = (props) => {
             {props.success.map((data, index) => {
               return (
                 <div key={index}>
+                  <CImg src='/image/success.svg' width={17} className="mr-1"/>
                   <Markup content={data} />
                 </div>
               );

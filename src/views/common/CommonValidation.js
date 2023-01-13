@@ -27,7 +27,7 @@ export function checkNullOrBlank(value) {
   *
   * @param value
   * @reutrn boolean
-  * @author 
+  * @author
   * @date 2021-02-10
   */
  export const isEmpty = (val) =>{
@@ -48,7 +48,7 @@ export function checkNullOrBlank(value) {
 /**
  * Explanation or Description of this method
  *
- * @author 
+ * @author
  * @create date
  * @param name
  * @return true(valid) || false(invalid)
@@ -60,13 +60,13 @@ export function checkNullOrBlank(value) {
     if(name.match(namechk)){
         return true;
     }else return false;
-  
+
 }
 
  /**
  * Explanation or Description of this method
  *
- * @author 
+ * @author
  * @create date
  * @param string
  * @return true(not null) || false(null)
@@ -82,7 +82,7 @@ export const nullChk = (i) =>{
  /**
  * Explanation or Description of this method
  *
- * @author 
+ * @author
  * @create date
  * @param email
  * @return true(valid) || false(invalid)
@@ -99,7 +99,7 @@ export const emailChk = (email) => {
  /**
  * Explanation or Description of this method
  *
- * @author 
+ * @author
  * @create date
  * @param num
  * @return true(valid) || false(invalid)
@@ -139,4 +139,8 @@ export const validateNRC = (nrc) => {
  export const validationWhiteSpace = (str) =>{
     if(!str) return str;
   return str.replace(/^\s+/g, '');
+}
+export const checkPassword = (str) => {
+  var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  return re.test(str);
 }

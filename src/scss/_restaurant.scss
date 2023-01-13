@@ -115,7 +115,7 @@ select:focus {
 .error {
   color: white;
   background-color: #f36d64;
-  border: 1px solid #f36d64 !important;
+  border: 1px solid #f78c84 !important;
   border-radius: 10px;
 }
 
@@ -291,7 +291,12 @@ box-shadow: 0px 0px 8px rgba(166, 167, 155, 0.6);
   font-weight: bold;
 }
 .form-label{
+  display: contents;
   color: #feec72;
+  font-size: 16px;
+}
+.login-input{
+  height: 40px;
 }
 .login-btn{
   width: auto !important;
@@ -309,9 +314,17 @@ hr{
 .forgot-password:hover{
   font-weight: bold;
 }
+.back-link{
+  color: #feec72;
+  font-size: 16px;
+}
+.back-link:hover{
+  font-weight: bold;
+}
 .cursor-style{
   cursor: pointer;
 }
+
 .red{
   color: rgb(245, 0, 0);
   animation: fadeIn ease 3s;
@@ -343,6 +356,21 @@ hr{
   -webkit-transform: translateY(-3px);
   transform: translateY(-5px);
   transition: all 0.2s ease-out;
+}
+
+//employee list
+
+table thead{
+  // background-color: #9ca13c;
+  // color: white;
+}
+
+.table-responsive{
+  overflow: auto;
+}
+.emp-list-table{
+  min-width: 1580px;
+  width: 100%;
 }
 @media (max-width:500px) {
   .tablet-register-form{

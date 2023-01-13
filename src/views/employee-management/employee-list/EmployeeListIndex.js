@@ -1,13 +1,6 @@
 import React from 'react'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CCol,
-  CRow
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react';
+import EmployeeListForm from './EmployeeListForm';
 
 const EmployeeListIndex = () => {
   return (
@@ -15,13 +8,13 @@ const EmployeeListIndex = () => {
       <CCol xs="12">
         <CCard>
           <CCardHeader>
-           Employee List
+           <h4 className='m-0'>Employee List</h4>
           </CCardHeader>
           <CCardBody>
+            <EmployeeListForm />
           </CCardBody>
         </CCard>
       </CCol>
-
     </CRow>
   )
 }

@@ -118,6 +118,12 @@ class App extends Component {
             />
             <Route
               exact
+              path="/material-management/import-material-list"
+              name="Import Material List"
+              render={(props) => <TheLayout {...props} />}
+            />
+            <Route
+              exact
               path="/order-system"
               name="Order System"
               render={(props) => <OrderSystem {...props} />}

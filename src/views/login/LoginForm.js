@@ -14,7 +14,7 @@ import SuccessError from '../common/SuccessError';
 const LoginForm = (props) => {
     let {error,success,shopCode,shopCodeChange,password,passwordChange,loginClick,passwordClick,passError,codeError,status,forgotStatus,
         backClick,userId,userIdChange,email,emailChange,submitClick,changePassword,confirmPass,confirmPassChange,
-        token,tokenChange,passwordSubmit} = props;
+        token,tokenChange,passwordSubmit,goBackClick} = props;
   return (
     <div className="min-vh-100 d-flex flex-row align-items-center login-bg">
       <CContainer>
@@ -209,7 +209,7 @@ const LoginForm = (props) => {
                   </div>
                   <hr />
                   <CRow className="mt-4 mb-2 ml-1">
-                    <CLabel className='back-link forgot-password cursor-style' onClick={backClick}>
+                    <CLabel className='back-link forgot-password cursor-style' onClick={goBackClick}>
                       <FontAwesomeIcon className='mr-2' icon={faBackward}/>
                       Go To Login</CLabel>
                   </CRow>

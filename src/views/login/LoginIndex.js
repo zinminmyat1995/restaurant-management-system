@@ -134,8 +134,17 @@ const LoginIndex = () => {
     // back button click from forgot password
     const backClick = () => {
         setError([]);setSuccess([]);setShopCode("");setPassword("");
-        setStatus(!status);
-        setForgotStatus(!forgotStatus);
+        setStatus(true);
+        setForgotStatus(false);
+        setChangeStatus(false);
+    }
+
+    // back button click from change new password form
+    const goBackClick = () => {
+      setError([]);setSuccess([]);setShopCode("");setPassword("");
+      setStatus(true);
+      setForgotStatus(false);
+      setChangeStatus(false);
     }
     return(
         <>
@@ -158,6 +167,7 @@ const LoginIndex = () => {
         passwordClick = {passwordClick}
         submitClick = {submitClick}
         backClick = {backClick}
+        goBackClick = {goBackClick}
         status = {status}
         forgotStatus = {forgotStatus}
         changePassword = {changePassword}

@@ -14,7 +14,10 @@ import {
 } from "@coreui/react";
 import Message from "../../common/SuccessError"
 const Modal = (props) => {
-  let { cancelBtn, show, title, type,success, error,okBtn,plusNameChangeType,plusNameChangeCate,plusNameCate,plusNameType } = props;
+  let { cancelBtn, show, title, type,success, error,okBtn,plusNameChangeType,plusNameChangeCate,plusNameCate,plusNameType 
+  ,plusNameChangeMeat,plusNameMeat
+  
+  } = props;
   return (
     <>
       <CModal
@@ -33,7 +36,7 @@ const Modal = (props) => {
               <Message success={success} error={error} />
             </CCol>
           </CRow>
-          {type == "plus1" && (
+          {type == "plusCat" && (
           <>
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
@@ -48,21 +51,21 @@ const Modal = (props) => {
           
           )}
 
-{type == "plus2" && (
+{type == "plusMeat" && (
           <>
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
                 <CLabel className="required">Name</CLabel>
               </CCol>
               <CCol lg="9">
-                <CInput onChange={plusNameChangeCate} value={plusNameCate} />
+                <CInput onChange={plusNameChangeMeat} value={plusNameMeat} />
               </CCol>
             </CRow>
           
           </>
           
           )}
-             {type == "plus" && (
+             {type == "plusType" && (
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
                 <CLabel className="required">Name</CLabel>
@@ -72,7 +75,7 @@ const Modal = (props) => {
               </CCol>
             </CRow>
           )}
-          {type == "minus" && (
+          {type == "minusType" && (
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
                 <CLabel className="required">Name</CLabel>
@@ -86,9 +89,7 @@ const Modal = (props) => {
               </CCol>
             </CRow>
           )}
-
-
-{type == "minus2 " && (
+          {type == "minusMeat " && (
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
                 <CLabel className="required">Name</CLabel>
@@ -102,7 +103,7 @@ const Modal = (props) => {
               </CCol>
             </CRow>
           )}
-            {type == "minus1" && (
+            {type == "minusCat" && (
             <CRow>
               <CCol lg="3" style={{ textAlign: "center" }}>
                 <CLabel className="required">Name</CLabel>

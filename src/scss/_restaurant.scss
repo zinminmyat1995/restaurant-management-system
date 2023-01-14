@@ -275,6 +275,87 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
 }
 // Zeyar Min End
 // ***** START PHYOE WAI AUNG *****//
+/************* START DATEPICKER *************/
+.MuiInput-underline::after {
+	display: none !important;
+}
+
+.MuiButtonBase-root:focus {
+	outline: none !important;
+}
+
+.MuiPickersDay-daySelected .MuiTypography-colorInherit {
+	color: rgb(145, 123, 123) !important;
+}
+
+.MuiGrid-justify-xs-space-around {
+	justify-content: left !important;
+}
+
+.MuiFormControl-root {
+	width: 100% !important;
+	border: none !important;
+}
+
+.MuiInput-underline::before {
+	border: none !important;
+}
+
+.MuiFormControl-root .MuiTextField-root .date-css {
+	// me
+	border: none !important;
+}
+.MuiDialogActions-spacing > :not(:first-child){
+  background-color: gainsboro;
+  color: black;
+}
+.MuiDialogActions-spacing > :not(:first-child):hover{
+  background-color: rgb(152, 142, 142);
+}
+.MuiPickersModal-withAdditionalAction > *:first-child{
+  background-color: gainsboro;
+  color: black;
+}
+.MuiPickersModal-withAdditionalAction > *:first-child:hover{
+  background-color: rgb(152, 142, 142);
+}
+.MuiInputBase-root {
+	// me
+	border: none !important;
+	//   margin-left: 11px !important;
+	font-size: 0.875rem !important;
+	// font-weight: 400 !important;
+	color: #969FAA !important;
+	background-color: #EBECF5 !important;
+	border: 1px solid #EBECF5 !important;
+	border-radius: 5px !important;
+}
+
+.MuiIconButton-root {
+	color: #384351 !important;
+}
+
+.MuiInputBase-root>input {
+	padding: 10px !important;
+}
+
+.MuiFormControl-root .MuiIconButton-root .MuiIconButton-label {
+	display: none;
+}
+
+.MuiInputAdornment-positionEnd {
+	padding: 15px;
+}
+
+.MuiFormControl-root .MuiIconButton-root {
+	background: url(/avatars/calendar.svg);
+	background-repeat: no-repeat;
+}
+// .clock .MuiFormControl-root .MuiIconButton-root{
+// 	background: url(/avatars/clock-purple.svg);
+// 	background-repeat: no-repeat;
+// }
+/************* END DATEPICKER *************/
 .login{
 padding: 0 30px;
 border-radius: 15px;
@@ -357,20 +438,69 @@ hr{
   transform: translateY(-5px);
   transition: all 0.2s ease-out;
 }
-
-//employee list
-
-table thead{
-  // background-color: #9ca13c;
-  // color: white;
+html:not([dir="rtl"]) .page-item .page-link {
+	box-shadow: none;
 }
-
-.table-responsive{
+//employee list
+.emp-list-table{
+  min-width: 1480px;
+  width: 100%;
+}
+.emp-list-table thead{
+  color: white;
+  background-color:  rgb(156, 161, 60);
+}
+.emp-list-table tr th {
+  border: 1px solid rgb(37, 36, 36);
+  padding: 0.75rem;
+}
+.emp-list-table tr td{
+  border: 1px solid rgb(37, 36, 36);
+  padding: 0.75rem;
+}
+.overflow{
   overflow: auto;
 }
-.emp-list-table{
-  min-width: 1580px;
+.emp-table-btn{
+  text-decoration: underline;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.btn-edit{
+  color: rgb(34, 82, 154);
+}
+.btn-del{
+  color: red;
+}
+.btn-edit:hover{
+  font-weight: bold;
+  color: rgb(26, 60, 111);
+}
+.btn-del:hover{
+  font-weight: bold;
+  color: rgb(166, 8, 8);
+}
+//end employee list
+//start import material list table
+.import-material-table{
+  min-width: 1040px;
   width: 100%;
+}
+.import-material-table thead{
+  color: white;
+  background-color:  rgb(156, 161, 60);
+}
+.import-material-table tr th {
+  border: 1px solid rgb(37, 36, 36);
+  padding: 0.75rem;
+}
+.import-material-table tr td{
+  border: 1px solid rgb(37, 36, 36);
+  padding: 0.75rem;
+}
+//end import material list table
+.page-item.active .page-link{
+  background-color: rgb(156, 161, 60);
 }
 @media (max-width:500px) {
   .tablet-register-form{

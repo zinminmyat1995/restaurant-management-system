@@ -277,5 +277,25 @@
 .hideRow {
   display: none;
 }
+
+.box {
+  background:
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) left -50px top -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) right -50px top -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) left -50px bottom -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) right -50px bottom -50px no-repeat, 
+    white;
+  position: relative;
+  margin: 80px auto;
+  width: 400px;
+  height: 100%;
+  padding: 0px 10px;
+   box-sizing: border-box;
+  font-family:'cairo',serif;
+  text-align: center;
+  font-size:18px;
+   box-shadow: 0px 50px 100px #262626;
+ }
+
 /****** End Yuwa  ********/
   

@@ -89,7 +89,7 @@ const CheckMenuList = (props) => {
                         </CCol>
                         <CCol sm="1">
                           <CImg
-                            src={"/image/plus1.svg"}
+                            src={"/image/plusCat.svg"}
                             width="15px"
                             onClick={() => plusClick(d.meat_type)}
                           />

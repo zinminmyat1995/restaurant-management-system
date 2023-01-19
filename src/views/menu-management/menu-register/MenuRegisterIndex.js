@@ -29,10 +29,11 @@ const MenuRegisterIndex = () => {
   const [plusNameCate, setPlusNameCate] = useState("");  // for plus modal name
   const [plusNameType, setPlusNameType] = useState("");  // for plus modal name
   const [plusNameMeat, setPlusNameMeat] = useState("");  // for plus modal name
+  const [total, setTotal] = useState(0);  // for plus modal name
  
   const [shopName, setShopName] = useState("Yuwa Tea House");  // for plus modal name
   const [menuName, setMenuName] = useState("20001");  // for plus modal name
-  const [menuID, setMenID] = useState("20001");  // for plus modal name
+  const [menuID, setMenuID] = useState();  // for plus modal name
   
   const [minusName, setMinusName] = useState("");  // for minus modal name
   const [minusNameData, setMinusNameData] = useState([]); // for minus modal name data
@@ -41,12 +42,12 @@ const MenuRegisterIndex = () => {
     { name: "fish", isChecked: "false" }
   ]); // for minus modal name data
   const [catData, setCatData] = useState([
-    { name: "Myanmar", id: "1" },
-    { name: "Thai", id: "2" },
-    { name: "China", id: "3" },
-    { name: "Shan", id: "4" },
+    { name: "Myanmar", id: "1" , total:"2" },
+    { name: "Thai", id: "2" ,total:"3" },
+    { name: "China", id: "3",total:"4" },
+    { name: "Shan", id: "4" ,total:"1"},
   ]); // for minus modal name data
-  const [MenuCatSelectValue, setMenuCatSelectValue] = useState("");  // for plus modal name
+  const [menuCatSelectValue, setMenuCatSelectValue] = useState("");  // for plus modal name
 
   const [typeData, setTypeData] = useState([
     { name: "Htamin Kyaw", id: "1" },
@@ -54,7 +55,7 @@ const MenuRegisterIndex = () => {
     { name: "Salad", id: "3" },
     { name: "DimSum", id: "4" },
   ]); // for minus modal name data
-  const [MenuTypeSelectValue, setMenuTypeSelectValue] = useState("");  // for plus modal name
+  const [menuTypeSelectValue, setMenuTypeSelectValue] = useState("");  // for plus modal name
   // for plus and minus button click function
   let btnClcik = (type) => {
     setModalShow(true);
@@ -91,10 +92,10 @@ const MenuRegisterIndex = () => {
   let saveClick = () =>{
     let errorArray = [];
 
-   if(MenuCatSelectValue == ""){
+   if(menuCatSelectValue == ""){
     errorArray.push(message.JSE019.replace("%s","Menu Category"))
    }
-   if(MenuTypeSelectValue == ""){
+   if(menuTypeSelectValue == ""){
     errorArray.push(message.JSE019.replace("%s","Menu Type"))
    }
 
@@ -149,7 +150,21 @@ const MenuRegisterIndex = () => {
   }
 
   let MenuCatSelectChange = (e) => {
-    setMenuCatSelectValue(e.target.value);
+
+    if(e.target.value == ""){
+      setMenuID("");
+      setMenuCatSelectValue("");
+    }else{
+      let[firstID,lastID]= e.target.value.split(",");
+      let first = parseInt(firstID);
+      let last = parseInt(lastID);
+        setMenuCatSelectValue(parseInt(firstID));
+        setTotal(parseInt(lastID));
+        let a = 0;
+        a = (1000 * first ) + last + 1
+          setMenuID(a);
+
+    }
   }
 
   const MenuNameChange = (e) => {
@@ -196,7 +211,7 @@ const MenuRegisterIndex = () => {
               <CCol lg="3">
               <CSelect
                 onChange={MenuCatSelectChange}
-                value={MenuCatSelectValue}
+                value={[menuCatSelectValue,total]}
               >
                 <option  value="">-- Select --</option>
                 {catData.length != 0 &&
@@ -204,7 +219,7 @@ const MenuRegisterIndex = () => {
                     return (
                       <option 
                       style={{backgroundColor: "#e6e8ff"}}
-                      key={index} value={data.id}>
+                      key={index} value={[data.id, data.total]}>
                         {data.name}
                       </option>
                     );
@@ -240,7 +255,7 @@ const MenuRegisterIndex = () => {
               <CCol lg="3">
               <CSelect
                 onChange={MenuTypeSelectChange}
-                value={MenuTypeSelectValue}
+                value={menuTypeSelectValue}
               >
                 <option  value="">-- Select --</option>
                 {typeData.length != 0 &&
@@ -309,7 +324,7 @@ const MenuRegisterIndex = () => {
 
           <CRow className="mt-3 ">
             <CCol lg="2"></CCol>
-            <CCol lg="8" style={{ border: "2px solid #a3a83b" , borderRadius : "5px"}} className ="box">
+            <CCol lg="8" style={{ border: "2px solid #a3a83b" , borderRadius : "5px"}}>
               <CRow className="mt-1">
                 <CCol lg="12" style={{ display: "flex" }} className="mt-4">
                   <h4 style={{ marginTop: "10px" }}>Meat and Price</h4> &nbsp;&nbsp;&nbsp;

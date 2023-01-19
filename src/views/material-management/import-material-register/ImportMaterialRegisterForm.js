@@ -6,6 +6,7 @@ import {
   CLabel,
   CInput,
   CSelect,
+  CImg
 } from "@coreui/react";
 
 const ImportMaterialRegisterForm = (props) => {
@@ -189,12 +190,28 @@ const ImportMaterialRegisterForm = (props) => {
                       <td style={{ border: "1px solid" }}>{data.purchase_type}</td>
                       <td style={{ border: "1px solid" }}>{data.total}</td>
                       <td style={{ border: "1px solid" }}>
-                        <CLabel
-                          style={{ color: "red" }}
-                          onClick={() => remove(data.material_id)}
-                        >
-                          Remove
-                        </CLabel>
+                      
+                        <div className="user-before">
+                                <CImg
+                                  src="/image/Delete-Component-inactive.svg"
+                                  onClick={() => remove(data.material_id)}
+                                  style={{
+                                    width: "40px",
+                                    height: "40px",
+                                    cursor: "pointer",
+                                  }}
+                                ></CImg>
+                                <CImg
+                                  className="user-after"
+                                  src="/image/Delete-Component-active.svg"
+                                  onClick={() => remove(data.material_id)}
+                                  style={{
+                                    width: "40px",
+                                    height: "40px",
+                                    cursor: "pointer",
+                                  }}
+                                ></CImg>
+                              </div>
                       </td>
                     </tr>
                   );

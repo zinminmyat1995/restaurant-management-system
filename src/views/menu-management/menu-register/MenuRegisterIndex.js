@@ -167,8 +167,6 @@ const MenuRegisterIndex = () => {
     }
   }
 
-
-
   const MenuNameChange = (e) => {
     setMenuName(e.target.value);
   };

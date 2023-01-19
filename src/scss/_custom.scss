@@ -1,0 +1,301 @@
+// for side bar profile
+.c-avatar-img{
+    border-radius: unset !important;
+}
+.c-sidebar{
+    background-image: linear-gradient(to right, #161e29, #3c4654) !important;
+}
+.c-sidebar-nav > .dashboard a::before {
+    background-image: url(/image/dashboard.svg);
+    margin-right: 0.5rem;
+}
+.c-sidebar-nav > .shop-management a::before {
+    background-image: url(/image/shop-management.svg);
+    margin-right: 0.5rem;
+}
+.c-sidebar-nav > .material-management> a::before {
+    background-image: url(/image/material-management.svg);
+    margin-right: 0.5rem;
+}
+.c-sidebar-nav > .menu-management a::before {
+    background-image: url(/image/menu-management.svg);
+    margin-right: 0.5rem;
+}
+.c-sidebar-nav > .employee-management a::before {
+  background-image: url(/image/employee-management.svg);
+  margin-right: 0.5rem;
+}
+.c-sidebar-nav > .logout a::before {
+  background-image: url(/image/logout.svg);
+  margin-right: 0.5rem;
+}
+.c-sidebar-nav > .cashier a::before {
+  background-image: url(/image/cashier.svg);
+  margin-right: 0.5rem;
+}
+
+  
+  body {
+    font-family: "Titillium Web", sans-serif;
+    // background: #f5f6fa;
+    background: transparent !important;
+    margin: 0 auto;
+  }
+  
+  * {
+    font-family: "Titillium Web", sans-serif;
+  }
+  .container {
+    color: #333333 !important;
+  }
+  
+  .c-wrapper {
+    background-color: #f5f6fa;
+  }
+  
+  // header test
+  .c-header,
+  .c-subheader{
+    background: white;
+  }
+  .c-body {
+    background: #ebedef;
+  }
+  header.c-header.c-header-light.c-header-fixed.c-header-with-subheader {
+    background-color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0px 0px 2px;
+  }
+  // Sidebar start
+  
+  .c-sidebar {
+    width: 244px;
+  }
+  
+  .c-body .c-main {
+    padding-top: 1rem;
+  }
+  
+  c-sidebar-nav {
+    display: block;
+  }
+  
+  .c-sidebar,
+  .c-sidebar .c-sidebar-nav-dropdown.c-show {
+    background: transparent;
+    color: #4e57aa;
+  }
+  
+  .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle {
+    background: #c4cce3;
+    color: white;
+  }
+  
+  // .c-sidebar-nav-link, .c-sidebar-nav-dropdown-toggle {
+  //   display: block;
+  // }
+  
+  .c-sidebar .c-sidebar-nav-link,
+  .c-sidebar .c-sidebar-nav-dropdown-toggle,
+  .c-sidebar .c-sidebar-nav-title,
+  .c-sidebar .c-sidebar-nav-link .c-sidebar-nav-icon,
+  .c-sidebar .c-sidebar-nav-dropdown-toggle .c-sidebar-nav-icon {
+    color: white;
+    white-space: break-spaces;
+    // padding-right: 1.5rem;
+    padding: 0.5rem 1.2rem;
+  
+    // animation page load
+    -webkit-animation: moveFromLeft 0.2s ease-out;
+    animation: moveFromLeft 0.4s ease-out;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    word-break: break-word;
+  }
+  
+  .c-sidebar .c-sidebar-nav-link.c-active .c-sidebar-nav-icon,
+  .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle .c-sidebar-nav-icon {
+    color: #4e57aa;
+  }
+  .c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-link,
+  .c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-dropdown-toggle {
+    // color: white;
+    white-space: break-spaces;
+  }
+  
+  
+  .c-sidebar .c-sidebar-nav-link.c-active {
+    border-radius: 0 5rem 5rem 0;
+    background: #c4cce3;
+    color: #feec72 !important;
+    // bg color from animation
+    background: linear-gradient(to left, #b6ba38, transparent 50%) right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+  }
+  
+  .c-sidebar .c-sidebar-nav-link:hover,
+  .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+    background: #c4cce3;
+    color: #feec72 !important;
+    border-radius: 0 5rem 5rem 0;
+    // animation hover
+    background: linear-gradient(to left, #b6ba38 10%, transparent 50%) right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+  }
+  
+  .c-avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.2rem auto;
+    text-align: center;
+    border-radius: unset !important;
+  }
+  
+  .c-avatar .c-avatar-img {
+    width: 80%;
+    height: 65px;
+    display: block;
+    margin: auto;
+    border-radius: unset !important;
+  }
+  
+  .sidebar-bg {
+    width: 100%;
+  }
+  
+  .c-sidebar .c-sidebar-nav-link.c-sidebar-nav-dropdown-toggle::after,
+  .c-sidebar .c-sidebar-nav-dropdown-toggle::after,
+  .c-sidebar .c-sidebar-nav-link:hover.c-sidebar-nav-dropdown-toggle::after,
+  .c-sidebar :hover.c-sidebar-nav-dropdown-toggle::after {
+    // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%238C98F2'><polygon points='0,0 100,0 50,50'/></svg>");
+    display: inline-block;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.5em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    flex: 0;
+  }
+  
+  .c-sidebar-nav {
+    margin-bottom: 3px;
+  }
+  
+  .c-sidebar-nav > li > a::before {
+    content: "";
+    width: 1.5rem;
+    height: 1rem;
+    background-size: 1rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+  
+  .c-sidebar-nav li ul li a::before {
+    content: "";
+    display: inline-block;
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 0.2rem;
+    width: 0.2rem;
+    margin-right: 0.5rem;
+    background-color: #feec72;
+  }
+  .c-sidebar-nav-dropdown {
+    position: static !important;
+  }
+  .c-sidebar .c-sidebar-nav-dropdown-toggle {
+    position: static !important;
+  }
+  .non-justify-content-between{
+    justify-content: unset !important;
+  }
+  
+
+ /****** Start  Yamin Zaw   ********/
+  .card-body {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+  }
+  .overflow-style {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .list-table {
+    min-width: 1020px;
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+  }
+  .list-heading {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-table thead tr {
+    outline: 2px solid #9ca13c;
+  }
+  .list-table th {
+    background-color: #9ca13c;
+    padding: 10px;
+    color: white
+  }
+  .list-bg {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    background-color: white;
+  }
+  .list-table td {
+    padding: 8px;
+  }
+/****** Start  Yamin Zaw  ********/
+
+/****** Start  Yuwa  ********/
+.user-before{
+  position: relative;
+  display: inline-block;
+}
+.user-before .user-after{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.user-before:hover .user-after{
+  display: inline;
+}
+
+.table td{
+  vertical-align: middle;
+}
+
+.hideRow {
+  display: none;
+}
+
+.box {
+  background:
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) left -50px top -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) right -50px top -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) left -50px bottom -50px no-repeat, 
+    url(https://tinypic.host/images/2023/01/14/J6gLosb.png) right -50px bottom -50px no-repeat, 
+    white;
+  position: relative;
+  margin: 80px auto;
+  width: 400px;
+  height: 100%;
+  padding: 0px 10px;
+   box-sizing: border-box;
+  font-family:'cairo',serif;
+  text-align: center;
+  font-size:18px;
+   box-shadow: 0px 50px 100px #262626;
+ }
+
+/****** End Yuwa  ********/
+  

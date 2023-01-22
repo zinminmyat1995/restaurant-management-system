@@ -113,7 +113,7 @@ const ShopAndMenuTabletRegisterIndex = () => {
       <CCol xs="12">
         <CCard>
           <CCardHeader>
-            <h4 className='m-0'>Shop & Menu Tablet Registration</h4>
+            <h4 className='m-0'>Shop And Tablet Registration</h4>
           </CCardHeader>
           <CCardBody>
             <ShopAndMenuTabletRegisterForm

@@ -423,19 +423,34 @@ hr{
 }
 // table start
 .table-container {
+  max-height: 450px;
+  overflow: auto;
 	background-color: white;
 	box-shadow: 0px 0px 10px rgba(171, 190, 209, 0.6);
-	padding: 30px 0px 30px 0px;
-	margin-top: 40px;
+	padding: 0px 0px 30px 0px;
 	margin: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
 	border-radius: 8px;
 }
 .total-rows {
 	color: #3B409B;
 	font-weight: bold;
 }
+.shop-menu-table{
+  min-width: 650px;
+  width: 100%;
+}
 .shop-menu-table thead tr th{
   vertical-align: middle;
+}
+.shop-menu-table tr th {
+  border: 1px solid rgb(219, 212, 212);
+  padding: 0.9rem;
+}
+.shop-menu-table tr td{
+  border: 1px solid rgb(219, 212, 212);
+  padding: 0.75rem;
 }
 .delete:hover{
   -webkit-transform: translateY(-3px);

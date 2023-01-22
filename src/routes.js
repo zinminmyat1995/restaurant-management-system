@@ -5,6 +5,7 @@ const EmployeeList = React.lazy(() => import('./views/employee-management/employ
 const ShopRegistrationAndList = React.lazy(() => import('./views/shop-management/shop-registration-and-list/ShopRegistrationAndListIndex'));
 const TableAndSeatRegisterIndex = React.lazy(() => import('./views/shop-management/table-and-seat-register/TableAndSeatRegisterIndex'));
 const ShopAndMenuTabletRegisterIndex = React.lazy(() => import('./views/shop-management/shop-and-menu-tablet-register/ShopAndMenuTabletRegisterIndex'));
+const ShopAndMenuTabletListIndex = React.lazy(() => import('./views/shop-management/shop-and-menu-tablet-list/ShopAndMenuTabletListIndex'));
 const MenuRegisterIndex = React.lazy(() => import('./views/menu-management/menu-register/MenuRegisterIndex'));
 const MenuListIndex = React.lazy(() => import('./views/menu-management/menu-list/MenuListIndex'));
 const MaterialRegisterIndex = React.lazy(() => import('./views/material-management/material-register/MaterialRegisterIndex'));
@@ -27,6 +28,7 @@ const routes = [
   { path: '/shop-management/shop-registration-and-list', name: 'Shop Registration And List', component: ShopRegistrationAndList },
   { path: '/shop-management/table-and-seat-register', name: 'Table And Seat Register', component: TableAndSeatRegisterIndex },
   { path: '/shop-management/shop-and-menu-tablet-register', name: 'Shop And Menu Tablet Register', component: ShopAndMenuTabletRegisterIndex  },
+  { path: '/shop-management/shop-and-menu-tablet-list', name: 'Shop And Menu Tablet List', component: ShopAndMenuTabletListIndex  },
   { path: '/menu-management', name: 'Menu Management',exact: true },
   { path: '/menu-management/menu-register', name: 'Menu Register', component: MenuRegisterIndex  },
   { path: '/menu-management/menu-list', name: 'Menu List', component: MenuListIndex  },

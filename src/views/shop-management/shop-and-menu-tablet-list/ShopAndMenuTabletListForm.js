@@ -1,24 +1,19 @@
 import { CButton, CCol, CImg, CInput, CLabel, CRow, CSelect } from "@coreui/react";
 import React from "react";
 
-const ShopAndMenuTabletRegisterForm = (props) => {
-    let {shopName, count , selectChange, countChange, addClick ,listData, totalRow, deleteClick,
-    password, passwordChange, ownPasswordChange, saveClick ,keyHandler} = props;
-    return(
-        <>
+function ShopAndMenuTabletListForm(props) {
+  let {shopName,shopNameChange,tabCode,tabCodeChange,keyHandler,searchClick} = props;
+  return (
+    <>
         <div className="mt-4 tablet-register-form">
             <CRow>
                 <CCol lg="6">
                     <CRow className="align-items-center">
                         <CCol lg="4">
-                            <CLabel className="required" style={{display:'contents'}}>Shop Name</CLabel>
+                            <CLabel style={{display:'contents'}}>Shop Name</CLabel>
                         </CCol>
                         <CCol lg="7">
-                            <CSelect className="cursor-style" value={shopName} onChange={selectChange}>
-                                <option value="">Select Shop</option>
-                                <option value="1">SHWE KANT KAW</option>
-                                <option value="2">BEST FOOD SHOP</option>
-                            </CSelect>
+                            <CInput type="text" value={shopName} onChange={shopNameChange} />
                         </CCol>
                         <CCol></CCol>
                     </CRow>
@@ -27,19 +22,19 @@ const ShopAndMenuTabletRegisterForm = (props) => {
                      <CRow className="align-items-center">
                         <CCol></CCol>
                         <CCol lg="4">
-                            <CLabel className="required" style={{display:'contents'}}>Tablet Count</CLabel>
+                            <CLabel style={{display:'contents'}}>Tablet Code</CLabel>
                         </CCol>
                         <CCol lg="7">
-                            <CInput type="text" value={count} onChange={countChange} onKeyDown={keyHandler}></CInput>
+                            <CInput type="text" value={tabCode} onChange={tabCodeChange} onKeyDown={keyHandler}/>
                         </CCol>
                     </CRow>
                 </CCol>
             </CRow>
             <CRow alignHorizontal="center" className="mt-5">
-                <CButton className="form-btn" onClick={addClick}>Add</CButton>
+                <CButton className="form-btn" onClick={searchClick}>Search</CButton>
             </CRow>
         </div>
-        {listData != "" &&
+        {/* {listData != "" &&
         <>
             <CRow className='mt-3 p-0' alignHorizontal="end" style={{marginRight:'40px'}}>
               <CLabel className='total-rows'>Total Row: {totalRow} rows</CLabel>
@@ -79,14 +74,9 @@ const ShopAndMenuTabletRegisterForm = (props) => {
               </CCol>
             </CRow>
         </>
-        }
-        {listData != "" &&
-        <CRow alignHorizontal="center">
-        <CButton className="form-btn" onClick={saveClick}>Save</CButton>
-        </CRow>
-        }
+        } */}
       </>
-    )
+  )
 }
 
-export default ShopAndMenuTabletRegisterForm;
+export default ShopAndMenuTabletListForm

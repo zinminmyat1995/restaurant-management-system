@@ -1,23 +1,39 @@
-import { CButton, CCol, CLabel, CRow, CSelect } from '@coreui/react'
+import { CButton, CCol, CInput, CLabel, CRow, CSelect } from '@coreui/react'
 import React from 'react';
 import NPagination from '../../common/pagination/NPagination';
 
 function EmployeeListForm(props) {
-  let {shopName,selectChange,searchClick,employeeList,totalRow,currentPage,lastPage,shopCode,pagination,
+  let {shopName,shopNameChange,shopCodeChange,searchClick,employeeList,totalRow,currentPage,lastPage,shopCode,pagination,
       editClick, delClick} = props;
   return (
     <div className='mt-4'>
-      <CRow alignHorizontal='center' className="mb-3">
-        <CCol lg="4">
+      <CRow className ="tablet-register-form">
+        <CCol lg="6">
           <CRow className="align-items-center">
             <CCol lg="4">
                 <CLabel style={{display:'contents'}}>Shop Name</CLabel>
             </CCol>
-            <CCol lg="8">
-                <CSelect className="cursor-style" value={shopName} onChange={selectChange}>
-                    <option value="">Select Shop</option>
+            <CCol lg="7">
+                <CSelect className="cursor-style" value={shopName} onChange={shopNameChange}>
+                    <option value="">Select Shop Name</option>
                     <option value="1">SHWE KANT KAW</option>
                     <option value="2">BEST FOOD SHOP</option>
+                </CSelect>
+            </CCol>
+            <CCol></CCol>
+          </CRow>
+        </CCol>
+        <CCol lg="6">
+          <CRow className="align-items-center">
+          <CCol></CCol>
+            <CCol lg="4">
+                <CLabel style={{display:'contents'}}>Shop Code</CLabel>
+            </CCol>
+            <CCol lg="7">
+                <CSelect className="cursor-style" value={shopCode} onChange={shopCodeChange}>
+                    <option value="">Select Shop Code</option>
+                    <option value="1">1234</option>
+                    <option value="2">2345</option>
                 </CSelect>
             </CCol>
           </CRow>
@@ -28,7 +44,7 @@ function EmployeeListForm(props) {
           Search
         </CButton>
       </CRow>
-      <CRow className='mt-5'>
+      <CRow className='mt-5 px-3'>
         <CCol>
           <p className='mb-0 font-weight-bold text-right'>Total : 15 row(s)</p>
           <div className='overflow'>

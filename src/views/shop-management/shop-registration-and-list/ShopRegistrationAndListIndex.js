@@ -11,7 +11,7 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
-const ShopRegistrationAndList = () => {
+const ShopRegistrationAndListIndex = () => {
   return (
     <CRow>
       <CCol xs="12">
@@ -110,4 +110,4 @@ const ShopRegistrationAndList = () => {
   );
 };
 
-export default ShopRegistrationAndList;
+export default ShopRegistrationAndListIndex;

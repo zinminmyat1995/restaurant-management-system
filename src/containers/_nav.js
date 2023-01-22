@@ -42,13 +42,23 @@ export default [
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Shop And Menu Tablet Register',
+        name: 'Shop And Tablet Registration',
         to: '/shop-management/shop-and-menu-tablet-register',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Table And Seat Register',
+        name: 'Shop And Tablet List',
+        to: '/shop-management/shop-and-menu-tablet-list',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Table And Seat Registration',
         to: '/shop-management/table-and-seat-register',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Table And Seat List',
+        to: '/shop-management/table-and-seat-list',
       }
     ],
   },

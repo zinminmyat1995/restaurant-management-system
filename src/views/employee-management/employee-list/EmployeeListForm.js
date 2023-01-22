@@ -30,7 +30,7 @@ function EmployeeListForm(props) {
       </CRow>
       <CRow className='mt-5'>
         <CCol>
-          <p className='mb-0 font-weight-bold'>Total : 15 row(s)</p>
+          <p className='mb-0 font-weight-bold text-right'>Total : 15 row(s)</p>
           <div className='overflow'>
             <table className='emp-list-table'>
               <thead>

@@ -12,9 +12,8 @@ import SuccessError from '../common/SuccessError';
  * @returns output shown in web page
 */
 const LoginForm = (props) => {
-    let {error,success,shopCode,shopCodeChange,password,passwordChange,loginClick,passwordClick,passError,codeError,status,forgotStatus,
-        backClick,userId,userIdChange,email,emailChange,submitClick,changePassword,confirmPass,confirmPassChange,
-        token,tokenChange,passwordSubmit,goBackClick} = props;
+    let {error,success,shopCode,shopCodeChange,password,passwordChange,loginClick,passwordClick,
+        passError,codeError,status,forgotStatus,keyHandler,backClick,userId,userIdChange,email,emailChange,submitClick,changePassword,confirmPass,confirmPassChange,token,tokenChange,passwordSubmit,goBackClick,keySubmit} = props;
   return (
     <div className="min-vh-100 d-flex flex-row align-items-center login-bg">
       <CContainer>
@@ -41,7 +40,7 @@ const LoginForm = (props) => {
                             <CImg src='./image/shop_code.png' width={20} height={20}></CImg>
                           </CInputGroupText>
                         </CInputGroupPrepend>
-                        <CInput className="login-input" placeholder='Enter Shop Code' type='text' autoFocus value={shopCode} onChange={shopCodeChange}></CInput>
+                        <CInput className="login-input" placeholder='Enter Shop Code' type='text' autoFocus value={shopCode} onChange={shopCodeChange} onKeyDown={keyHandler}></CInput>
                       </CInputGroup>
                     </CCol>
                   </CRow>
@@ -60,7 +59,7 @@ const LoginForm = (props) => {
                             <CImg src='./image/password.png' width={20} height={20}></CImg>
                           </CInputGroupText>
                         </CInputGroupPrepend>
-                        <CInput className="login-input" placeholder='Enter Password' type='text' value={password} onChange={passwordChange}></CInput>
+                        <CInput className="login-input" placeholder='Enter Password' type='text' value={password} onChange={passwordChange} onKeyDown={keyHandler}></CInput>
                       </CInputGroup>
                     </CCol>
                   </CRow>
@@ -99,7 +98,7 @@ const LoginForm = (props) => {
                             <FontAwesomeIcon width={20} height={20} icon={faUser}/>
                           </CInputGroupText>
                         </CInputGroupPrepend>
-                        <CInput className="login-input" placeholder='Enter User Id' type='text' autoFocus value={userId} onChange={userIdChange}></CInput>
+                        <CInput className="login-input" placeholder='Enter User Id' type='text' autoFocus value={userId} onChange={userIdChange} onKeyDown={keySubmit}></CInput>
                       </CInputGroup>
                     </CCol>
                   </CRow>
@@ -118,7 +117,7 @@ const LoginForm = (props) => {
                             <FontAwesomeIcon width={20} height={20} icon={faEnvelope}/>
                           </CInputGroupText>
                         </CInputGroupPrepend>
-                        <CInput className="login-input" placeholder='Enter Email' type='text' value={email} onChange={emailChange}></CInput>
+                        <CInput className="login-input" placeholder='Enter Email' type='text' value={email} onChange={emailChange} onKeyDown={keySubmit}></CInput>
                       </CInputGroup>
                     </CCol>
                   </CRow>

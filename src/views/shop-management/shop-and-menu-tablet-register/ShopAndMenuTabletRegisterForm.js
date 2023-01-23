@@ -46,9 +46,9 @@ const ShopAndMenuTabletRegisterForm = (props) => {
             </CRow>
             <CRow className='table-container'>
               <CCol>
-                <CRow className="shop-tablet-table">
+                <CRow>
                   <CCol className='p-0'>
-                      <div className='table-responsive'>
+                      <div className='table-responsive shop-tablet-table'>
                           <table className='shop-menu-table'>
                               <thead className="text-center">
                                   <tr>

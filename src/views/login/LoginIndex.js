@@ -50,14 +50,25 @@ const LoginIndex = () => {
       setToken(e.target.value);
     }
 
+    const keyHandler = (e) => {
+      if (e.key == "Enter") {
+        loginClick();
+      }
+    }
+
+    const keySubmit = (e) => {
+      if (e.key == "Enter") {
+        submitClick();
+      }
+    }
 
     // login Click function
     const loginClick = () => {
+      if(!checkNullOrBlank(shopCode)){
+        err.push(CommonMessage.JSE005.replace('%s','shop code'));
+      }
         if(!checkNullOrBlank(password)){
             err.push(CommonMessage.JSE005.replace('%s','password'));
-        }
-        if(!checkNullOrBlank(shopCode)){
-          err.push(CommonMessage.JSE005.replace('%s','shop code'));
         }
 
         if(err.length > 0) {
@@ -172,6 +183,8 @@ const LoginIndex = () => {
         forgotStatus = {forgotStatus}
         changePassword = {changePassword}
         passwordSubmit = {passwordSubmit}
+        keyHandler = {keyHandler}
+        keySubmit = {keySubmit}
         />
         </>
     )

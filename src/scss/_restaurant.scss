@@ -149,31 +149,33 @@ select:focus {
   animation-name: play60;
   animation-iteration-count: infinite;
 }
-.order-system-card-body{
-    margin-left: unset !important;
-    margin-right: unset !important;
-    background: #ebedef;
-    margin-top: 119px;
+.order-system-card-body {
+  margin-left: unset !important;
+  margin-right: unset !important;
+  background: #ebedef;
+  margin-top: 119px;
 }
 
-.menu_category_card{
+.menu_category_card {
   height: 100px;
   align-items: center;
   border-radius: 20px;
   box-shadow: 0px 4px 6px -2px;
 }
-.css-16t5uud{
+.css-16t5uud {
   min-width: 100% !important;
   background: #455261 !important;
-
 }
-button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
   color: white;
 }
-.css-ptiqhd-MuiSvgIcon-root{
+.css-ptiqhd-MuiSvgIcon-root {
   color: white;
 }
-.menu-list-menu-name{
+.menu-list-menu-name {
   font-size: 15px;
   font-family: cursive;
   padding: 10px;
@@ -192,229 +194,259 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
   padding: 16px;
   margin-top: 160px;
 }
-.add-to-cart-btn{
+.add-to-cart-btn {
   background: #455261;
 }
-.nav-main-body-order-system{
+.nav-main-body-order-system {
   padding: 16px;
   margin-top: 119px;
   background: white;
 }
-.cashier-payment-card{
+.cashier-payment-card {
   height: 400px;
   overflow-y: auto;
 }
-.cashier-table-card{
+.cashier-table-card {
   width: 150px;
   height: 100px;
   // box-shadow: 0px 1px 1px 0px gray;
 }
-.cashier-table-card-tableno{
+.cashier-table-card-tableno {
   font-size: 20px;
 }
-.cashier-table-card-tablefooter{
+.cashier-table-card-tablefooter {
   font-size: 10px;
   font-weight: bold;
   margin-left: -1px !important;
 }
-.cashier-menu-name{
+.cashier-menu-name {
   // text-align: center;
   font-size: 13px;
   padding-left: 5px;
 }
-.cashier-total-price{
+.cashier-total-price {
   text-align: center;
 }
-.cashier-menu-divide{
+.cashier-menu-divide {
   margin: 0;
   width: 100%;
   border: 1px #101010;
-    border-top-style: none;
+  border-top-style: none;
   border-top-style: dashed;
 }
-.cashier-total-price-footer{
+.cashier-total-price-footer {
   background: #191c1f;
-    color: white;
+  color: white;
 }
 
 header.c-header.c-header-light.c-header-fixed.c-header-with-subheader {
   margin-left: 0rem !important;
   margin-right: 0rem !important;
-
 }
-
-
-
-
-
 
 // zin min myat end
 
-
-
-
-
-
-
-
-
-
-
 // Zeyar Min Start
 .input-row {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .btn {
   width: 10rem;
   color: #ffffff;
 }
-.btn-save {
-  background-color: #6edabc;
-  color: #ffffff;
-  margin-right: 2rem;
+.hour-input {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0 !important;
 }
-.btn-search {
-  background-color: #3a86ff;
-  margin-left: 2rem;
+.overflow-style {
+  overflow: auto;
 }
+td {
+  border: 1px solid #adb5bd;
+  border-collapse: collapse;
+}
+.list-table {
+  min-width: 465px !important;
+}
+.fa-pen-to-square,
+.fa-circle-info,
+.fa-trash-can {
+  font-size: 1.3rem;
+  color: #9a8c98 !important;
+  cursor: pointer;
+}
+.fa-trash-can {
+  color: #ba181b !important;
+}
+.form-select {
+  width: 65px;
+  padding-left: 5px;
+}
+.hr-span {
+  margin-left: 15px;
+}
+.min-span {
+  margin-left: 5px;
+}
+.col-radio {
+  // display: flex;
+  // flex-direction: column;
+  padding: 5px 2px;
+}
+.radio-label {
+  margin-left: 5px;
+  margin-right: 25px;
+}
+.radio-am-label {
+  margin-left: 5px;
+}
+.radio-pm-label {
+  margin-left: 25px;
+}
+.form-check-input {
+  margin-left: 5px !important;
+  margin-top: 3px !important;
+}
+
 // Zeyar Min End
 // ***** START PHYOE WAI AUNG *****//
 /************* START DATEPICKER *************/
 .MuiInput-underline::after {
-	display: none !important;
+  display: none !important;
 }
 
 .MuiButtonBase-root:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 .MuiPickersDay-daySelected .MuiTypography-colorInherit {
-	color: rgb(145, 123, 123) !important;
+  color: rgb(145, 123, 123) !important;
 }
 
 .MuiGrid-justify-xs-space-around {
-	justify-content: left !important;
+  justify-content: left !important;
 }
 
 .MuiFormControl-root {
-	width: 100% !important;
-	border: none !important;
+  width: 100% !important;
+  border: none !important;
 }
 
 .MuiInput-underline::before {
-	border: none !important;
+  border: none !important;
 }
 
 .MuiFormControl-root .MuiTextField-root .date-css {
-	// me
-	border: none !important;
+  // me
+  border: none !important;
 }
-.MuiDialogActions-spacing > :not(:first-child){
+.MuiDialogActions-spacing > :not(:first-child) {
   background-color: gainsboro;
   color: black;
 }
-.MuiDialogActions-spacing > :not(:first-child):hover{
+.MuiDialogActions-spacing > :not(:first-child):hover {
   background-color: rgb(152, 142, 142);
 }
-.MuiPickersModal-withAdditionalAction > *:first-child{
+.MuiPickersModal-withAdditionalAction > *:first-child {
   background-color: gainsboro;
   color: black;
 }
-.MuiPickersModal-withAdditionalAction > *:first-child:hover{
+.MuiPickersModal-withAdditionalAction > *:first-child:hover {
   background-color: rgb(152, 142, 142);
 }
 .MuiInputBase-root {
-	// me
-	border: none !important;
-	//   margin-left: 11px !important;
-	font-size: 0.875rem !important;
-	// font-weight: 400 !important;
-	color: #969FAA !important;
-	background-color: #EBECF5 !important;
-	border: 1px solid #EBECF5 !important;
-	border-radius: 5px !important;
+  // me
+  border: none !important;
+  //   margin-left: 11px !important;
+  font-size: 0.875rem !important;
+  // font-weight: 400 !important;
+  color: #969faa !important;
+  background-color: #ebecf5 !important;
+  border: 1px solid #ebecf5 !important;
+  border-radius: 5px !important;
 }
 
 .MuiIconButton-root {
-	color: #384351 !important;
+  color: #384351 !important;
 }
 
-.MuiInputBase-root>input {
-	padding: 10px !important;
+.MuiInputBase-root > input {
+  padding: 10px !important;
 }
 
 .MuiFormControl-root .MuiIconButton-root .MuiIconButton-label {
-	display: none;
+  display: none;
 }
 
 .MuiInputAdornment-positionEnd {
-	padding: 15px;
+  padding: 15px;
 }
 
 .MuiFormControl-root .MuiIconButton-root {
-	background: url(/avatars/calendar.svg);
-	background-repeat: no-repeat;
+  background: url(/avatars/calendar.svg);
+  background-repeat: no-repeat;
 }
 // .clock .MuiFormControl-root .MuiIconButton-root{
 // 	background: url(/avatars/clock-purple.svg);
 // 	background-repeat: no-repeat;
 // }
 /************* END DATEPICKER *************/
-.login{
-padding: 0 30px;
-border-radius: 15px;
-background-image: linear-gradient(to right, #161e29, #3c4654);
-border: 1px solid #39372e;
-box-shadow: 0px 0px 8px rgba(166, 167, 155, 0.6);
+.login {
+  padding: 0 30px;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #161e29, #3c4654);
+  border: 1px solid #39372e;
+  box-shadow: 0px 0px 8px rgba(166, 167, 155, 0.6);
 }
-.login-bg{
+.login-bg {
   background-image: url(/image/side_bar_profile.jpg);
   background-size: cover;
 }
-.login-title{
+.login-title {
   color: #feec72;
   font-weight: bold;
 }
-.form-label{
+.form-label {
   display: contents;
   color: #feec72;
   font-size: 16px;
 }
-.login-input{
+.login-input {
   height: 40px;
 }
-.login-btn{
+.login-btn {
   width: auto !important;
   margin-right: 1rem;
 }
-hr{
+hr {
   margin: 0;
   width: 100%;
   border: 1px #feec72;
   border-top-style: dashed;
 }
-.forgot-password{
+.forgot-password {
   color: #feec72;
 }
-.forgot-password:hover{
+.forgot-password:hover {
   font-weight: bold;
 }
-.back-link{
+.back-link {
   color: #feec72;
   font-size: 16px;
 }
-.back-link:hover{
+.back-link:hover {
   font-weight: bold;
 }
-.cursor-style{
+.cursor-style {
   cursor: pointer;
 }
 
-.red{
+.red {
   color: rgb(245, 0, 0);
   animation: fadeIn ease 3s;
 }
-.tablet-register-form{
+.tablet-register-form {
   padding: 0 100px;
 }
 .required:after {
@@ -423,100 +455,100 @@ hr{
 }
 // table start
 .table-container {
-	background-color: white;
-	box-shadow: 0px 0px 10px rgba(171, 190, 209, 0.6);
-	padding: 30px 0px 30px 0px;
-	margin-top: 40px;
-	margin: 40px;
-	border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(171, 190, 209, 0.6);
+  padding: 30px 0px 30px 0px;
+  margin-top: 40px;
+  margin: 40px;
+  border-radius: 8px;
 }
 .total-rows {
-	color: #3B409B;
-	font-weight: bold;
+  color: #3b409b;
+  font-weight: bold;
 }
-.shop-menu-table thead tr th{
+.shop-menu-table thead tr th {
   vertical-align: middle;
 }
-.delete:hover{
+.delete:hover {
   -webkit-transform: translateY(-3px);
   transform: translateY(-5px);
   transition: all 0.2s ease-out;
 }
 html:not([dir="rtl"]) .page-item .page-link {
-	box-shadow: none;
+  box-shadow: none;
 }
 //employee list
-.emp-list-table{
+.emp-list-table {
   min-width: 1480px;
   width: 100%;
 }
-.emp-list-table thead{
+.emp-list-table thead {
   color: white;
-  background-color:  rgb(156, 161, 60);
+  background-color: rgb(156, 161, 60);
 }
 .emp-list-table tr th {
   border: 1px solid rgb(37, 36, 36);
   padding: 0.75rem;
 }
-.emp-list-table tr td{
+.emp-list-table tr td {
   border: 1px solid rgb(37, 36, 36);
   padding: 0.75rem;
 }
-.overflow{
+.overflow {
   overflow: auto;
 }
-.emp-table-btn{
+.emp-table-btn {
   text-decoration: underline;
   vertical-align: middle;
   cursor: pointer;
 }
-.btn-edit{
+.btn-edit {
   color: rgb(34, 82, 154);
 }
-.btn-del{
+.btn-del {
   color: red;
 }
-.btn-edit:hover{
+.btn-edit:hover {
   font-weight: bold;
   color: rgb(26, 60, 111);
 }
-.btn-del:hover{
+.btn-del:hover {
   font-weight: bold;
   color: rgb(166, 8, 8);
 }
 //end employee list
 //start import material list table
-.import-material-table{
+.import-material-table {
   min-width: 1040px;
   width: 100%;
 }
-.import-material-table thead{
+.import-material-table thead {
   color: white;
-  background-color:  rgb(156, 161, 60);
+  background-color: rgb(156, 161, 60);
 }
 .import-material-table tr th {
   border: 1px solid rgb(37, 36, 36);
   padding: 0.75rem;
 }
-.import-material-table tr td{
+.import-material-table tr td {
   border: 1px solid rgb(37, 36, 36);
   padding: 0.75rem;
 }
 //end import material list table
-.page-item.active .page-link{
+.page-item.active .page-link {
   background-color: rgb(156, 161, 60);
 }
-@media (max-width:500px) {
-  .tablet-register-form{
+@media (max-width: 500px) {
+  .tablet-register-form {
     padding: 0 20px;
   }
 }
 // ***** END PHYOE WAI AUNG *****//
 
 // ***** START Yuwa Ko Ko *****//
-.without-allowed{
+.without-allowed {
   cursor: not-allowed;
-  background:#ebeee6 !important;
+  background: #ebeee6 !important;
 }
 
 // ***** END Yuwa Ko Ko *****//

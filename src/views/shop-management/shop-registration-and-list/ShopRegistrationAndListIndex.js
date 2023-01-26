@@ -40,30 +40,6 @@ const ShopRegistrationAndList = () => {
   const [minOpenSelectValue, setMinOpenSelectValue] = useState("");
   const [hrCloseSelectValue, setHrCloseSelectValue] = useState("");
   const [minCloseSelectValue, setMinCloseSelectValue] = useState("");
-  const [radioChkVal, setRadioChkVal] = useState("");
-
-  const [hr, setHr] = useState([
-    { name: "00", hr: "00" },
-    { name: "01", hr: "01" },
-    { name: "02", hr: "02" },
-    { name: "03", hr: "03" },
-    { name: "04", hr: "04" },
-  ]);
-  const [min, setMin] = useState([
-    { name: "00", hr: "00" },
-    { name: "01", hr: "01" },
-    { name: "02", hr: "02" },
-    { name: "03", hr: "03" },
-    { name: "04", hr: "04" },
-  ]);
-  const [openRadioData, setOpenRadioData] = useState([
-    { id: 1, name: "AM" },
-    { id: 2, name: "PM" },
-  ]); // radio array
-  const [closeRadioData, setCloseRadioData] = useState([
-    { id: 1, name: "AM" },
-    { id: 2, name: "PM" },
-  ]);
 
   const shopCodeChange = (e) => {
     setShopCode(e.target.value);
@@ -94,10 +70,6 @@ const ShopRegistrationAndList = () => {
   };
   const minCloseSelectChange = (e) => {
     setMinCloseSelectValue(e.target.value);
-  };
-
-  const radioChange = (data) => {
-    setRadioChkVal(data.id);
   };
 
   const saveClick = () => {
@@ -142,29 +114,33 @@ const ShopRegistrationAndList = () => {
       errorMsg.push(CommonMessage.JSE008.replace("", ""));
     }
     if (!checkNullOrBlank(hrOpenSelectValue)) {
-      errorMsg.push(CommonMessage.JSE005.replace("%s", "choose opening hour"));
+      errorMsg.push(CommonMessage.JSE001.replace("%s", "opening hour"));
       setError(errorMsg);
     }
     if (!checkNullOrBlank(minOpenSelectValue)) {
-      errorMsg.push(
-        CommonMessage.JSE005.replace("%s", "choose opening minute")
-      );
+      errorMsg.push(CommonMessage.JSE001.replace("%s", "opening minute"));
       setError(errorMsg);
     }
     if (!checkNullOrBlank(hrCloseSelectValue)) {
-      errorMsg.push(CommonMessage.JSE005.replace("%s", "choose closing hour"));
+      errorMsg.push(CommonMessage.JSE001.replace("%s", "closing hour"));
       setError(errorMsg);
     }
     if (!checkNullOrBlank(minCloseSelectValue)) {
-      errorMsg.push(
-        CommonMessage.JSE005.replace("%s", "choose closing minute")
-      );
+      errorMsg.push(CommonMessage.JSE001.replace("%s", "closing minute"));
       setError(errorMsg);
     }
     scrollTop();
   };
   const searchClick = () => {
     alert("search");
+  };
+
+  const editClick = () => {
+    alert("clicked");
+  };
+
+  const deleteClick = () => {
+    alert("clicked");
   };
   const scrollTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -192,8 +168,6 @@ const ShopRegistrationAndList = () => {
               confirmPasswordChange={confirmPasswordChange}
               saveClick={saveClick}
               searchClick={searchClick}
-              hr={hr}
-              min={min}
               hrOpenSelectChange={hrOpenSelectChange}
               hrOpenSelectValue={hrOpenSelectValue}
               minOpenSelectChange={minOpenSelectChange}
@@ -202,9 +176,8 @@ const ShopRegistrationAndList = () => {
               hrCloseSelectValue={hrCloseSelectValue}
               minCloseSelectChange={minCloseSelectChange}
               minCloseSelectValue={minCloseSelectValue}
-              openRadioData={openRadioData}
-              closeRadioData={closeRadioData}
-              radioChange={radioChange}
+              editClick={editClick}
+              deleteClick={deleteClick}
             />
           </CCardBody>
         </CCard>

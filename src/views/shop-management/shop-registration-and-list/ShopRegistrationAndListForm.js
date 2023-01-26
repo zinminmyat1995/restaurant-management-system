@@ -5,6 +5,7 @@ import {
   CCol,
   CLabel,
   CInput,
+  CImg,
   CInputRadio,
   CSelect,
 } from "@coreui/react";
@@ -46,8 +47,6 @@ const ShopRegistrationAndListForm = (props) => {
     confirmPasswordChange,
     saveClick,
     searchClick,
-    hr,
-    min,
     hrOpenSelectChange,
     hrOpenSelectValue,
     minOpenSelectChange,
@@ -56,9 +55,8 @@ const ShopRegistrationAndListForm = (props) => {
     hrCloseSelectValue,
     minCloseSelectChange,
     minCloseSelectValue,
-    openRadioData,
-    closeRadioData,
-    radioChange,
+    editClick,
+    deleteClick,
   } = props;
 
   return (
@@ -816,13 +814,42 @@ const ShopRegistrationAndListForm = (props) => {
               <td style={{ width: 75 }}></td>
               <td style={{ width: 50 }}>{phone}</td>
               <td style={{ width: 30 }}>
-                <FontAwesomeIcon icon={faPenToSquare} />
+                {/* <FontAwesomeIcon icon={faPenToSquare} /> */}
+                <CImg
+                  src="/image/Edit-Component-inactive.svg"
+                  onClick={() => {
+                    editClick();
+                  }}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    cursor: "pointer",
+                  }}
+                ></CImg>
               </td>
               <td style={{ width: 30 }}>
                 <FontAwesomeIcon icon={faInfoCircle} />
               </td>
               <td style={{ width: 30 }}>
-                <FontAwesomeIcon icon={faTrashCan} />
+                <CImg
+                  src="/image/Delete-Component-inactive.svg"
+                  onClick={() => deleteClick()}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    cursor: "pointer",
+                  }}
+                ></CImg>
+                {/* <CImg
+                  className="user-after"
+                  src="/image/Delete-Component-active.svg"
+                  // onClick={() => deleteClick()}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    cursor: "pointer",
+                  }}
+                ></CImg> */}
               </td>
 
               {/* <td style={{ width: 25 }}>1</td>
